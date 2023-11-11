@@ -18,6 +18,7 @@ module.exports = (user) => {
     resetPasswordLink: user.resetPasswordLink,
     loginRetryLimit: user.loginRetryLimit,
     loginReactiveTime: user.loginReactiveTime,
+    ssoAuth: user.ssoAuth,
   };
 
   // remove undefined values

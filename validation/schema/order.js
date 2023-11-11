@@ -10,6 +10,8 @@ const createSchema = joi.object({
   totalAmount: joi.number().integer().allow(0),
   status: joi.string().allow(null).allow(''),
   isActive: joi.boolean(),
+  datefrom: joi.date().options({ convert: true }).allow(null).allow(''),
+  dateto: joi.date().options({ convert: true }).allow(null).allow(''),
   isDeleted: joi.boolean()
 }).unknown(true);
 
@@ -20,6 +22,8 @@ const updateSchema = joi.object({
   totalAmount: joi.number().integer().allow(0),
   status: joi.string().allow(null).allow(''),
   isActive: joi.boolean(),
+  datefrom: joi.date().options({ convert: true }).allow(null).allow(''),
+  dateto: joi.date().options({ convert: true }).allow(null).allow(''),
   isDeleted: joi.boolean(),
   _id: joi.string().regex(/^[0-9a-fA-F]{24}$/)
 }
@@ -35,6 +39,8 @@ let filterValidationSchema = joi.object({
       totalAmount: joi.alternatives().try(joi.array().items(),joi.number().integer(),joi.object()),
       status: joi.alternatives().try(joi.array().items(),joi.string(),joi.object()),
       isActive: joi.alternatives().try(joi.array().items(),joi.boolean(),joi.object()),
+      datefrom: joi.alternatives().try(joi.array().items(),joi.date().options({ convert: true }),joi.object()),
+      dateto: joi.alternatives().try(joi.array().items(),joi.date().options({ convert: true }),joi.object()),
       isDeleted: joi.alternatives().try(joi.array().items(),joi.boolean(),joi.object()),
       id: joi.any(),
       _id: joi.alternatives().try(joi.array().items(),joi.string().regex(/^[0-9a-fA-F]{24}$/),joi.object())

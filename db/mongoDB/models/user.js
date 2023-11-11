@@ -72,7 +72,8 @@ const schema = new Schema({
     type:Number,
     default:0
   },
-  loginReactiveTime: { type:Date }
+  loginReactiveTime: { type:Date },
+  ssoAuth: { githubId:{ type:String } }
 }
 ,{ 
   timestamps: { 

@@ -2354,6 +2354,66 @@ async function seedRouteRole () {
         method: 'POST'
       },
       {
+        route: '/admin/activitylog/create',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
+        route: '/admin/activitylog/addbulk',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
+        route: '/admin/activitylog/list',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
+        route: '/admin/activitylog/:id',
+        role: 'System_User',
+        method: 'GET' 
+      },
+      {
+        route: '/admin/activitylog/count',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
+        route: '/admin/activitylog/update/:id',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/admin/activitylog/partial-update/:id',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/admin/activitylog/updatebulk',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/admin/activitylog/softdelete/:id',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/admin/activitylog/softdeletemany',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/admin/activitylog/delete/:id',
+        role: 'System_User',
+        method: 'DELETE'
+      },
+      {
+        route: '/admin/activitylog/deletemany',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
         route: '/admin/role/create',
         role: 'System_User',
         method: 'POST' 
@@ -4844,6 +4904,66 @@ async function seedRouteRole () {
         method: 'POST'
       },
       {
+        route: '/device/api/v1/activitylog/create',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
+        route: '/device/api/v1/activitylog/addbulk',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
+        route: '/device/api/v1/activitylog/list',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
+        route: '/device/api/v1/activitylog/:id',
+        role: 'System_User',
+        method: 'GET'
+      },
+      {
+        route: '/device/api/v1/activitylog/count',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
+        route: '/device/api/v1/activitylog/update/:id',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/device/api/v1/activitylog/partial-update/:id',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/device/api/v1/activitylog/updatebulk',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/device/api/v1/activitylog/softdelete/:id',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/device/api/v1/activitylog/softdeletemany',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/device/api/v1/activitylog/delete/:id',
+        role: 'System_User',
+        method: 'DELETE'
+      },
+      {
+        route: '/device/api/v1/activitylog/deletemany',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
         route: '/device/api/v1/role/create',
         role: 'System_User',
         method: 'POST'
@@ -7330,6 +7450,66 @@ async function seedRouteRole () {
       },
       {
         route: '/client/api/v1/usertokens/deletemany',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
+        route: '/client/api/v1/activitylog/create',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
+        route: '/client/api/v1/activitylog/addbulk',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
+        route: '/client/api/v1/activitylog/list',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
+        route: '/client/api/v1/activitylog/:id',
+        role: 'System_User',
+        method: 'GET'
+      },
+      {
+        route: '/client/api/v1/activitylog/count',
+        role: 'System_User',
+        method: 'POST'
+      },
+      {
+        route: '/client/api/v1/activitylog/update/:id',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/client/api/v1/activitylog/partial-update/:id',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/client/api/v1/activitylog/updatebulk',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/client/api/v1/activitylog/softdelete/:id',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/client/api/v1/activitylog/softdeletemany',
+        role: 'System_User',
+        method: 'PUT'
+      },
+      {
+        route: '/client/api/v1/activitylog/delete/:id',
+        role: 'System_User',
+        method: 'DELETE'
+      },
+      {
+        route: '/client/api/v1/activitylog/deletemany',
         role: 'System_User',
         method: 'POST'
       },

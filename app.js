@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session');
 const cors = require('cors');
 const path = require('path');
 const dotenv = require('dotenv');
@@ -14,6 +15,7 @@ const passport = require('passport');
 const { adminPassportStrategy } = require('./middleware');
 const { devicePassportStrategy } = require('./middleware');
 const { clientPassportStrategy } = require('./middleware');
+const { githubPassportStrategy } = require('./middleware');
 
 const app = express();
 const corsOptions = { origin: process.env.ALLOW_ORIGIN, };
@@ -22,6 +24,7 @@ app.use(cors(corsOptions));
 //template engine
 app.set('view engine', 'ejs'); 
 app.set('views', path.join(__dirname, 'views'));
+app.use(require('./middleware/activityLog').addActivityLog);
 
 //all routes 
 const routes =  require('./routes');
@@ -29,11 +32,18 @@ const routes =  require('./routes');
 adminPassportStrategy(passport);
 devicePassportStrategy(passport);
 clientPassportStrategy(passport);
+githubPassportStrategy(passport);
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(passport.initialize());
+app.use(session({
+  secret:'my-secret',
+  resave:true,
+  saveUninitialized:false
+}));
 app.use(routes);
 
 //swagger Documentation

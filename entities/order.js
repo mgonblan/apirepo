@@ -11,6 +11,8 @@ module.exports = (order) => {
     updatedAt: order.updatedAt,
     addedBy: order.addedBy,
     updatedBy: order.updatedBy,
+    datefrom: order.datefrom,
+    dateto: order.dateto,
     isDeleted: order.isDeleted,
   };
 

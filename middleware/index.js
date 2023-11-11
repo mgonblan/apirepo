@@ -18,6 +18,9 @@ const checkRolePermission = require('./checkRolePermission')({
 const adminPassportStrategy = require('./adminPassportStrategy')({ userDb });
 const devicePassportStrategy = require('./devicePassportStrategy')({ userDb });
 const clientPassportStrategy = require('./clientPassportStrategy')({ userDb });
+const githubPassportStrategy = require('./githubPassportStrategy')({ userDb });
+
+const ibmauth = require('./ibmauth');
 
 module.exports = {
   auth,
@@ -25,4 +28,6 @@ module.exports = {
   adminPassportStrategy,
   devicePassportStrategy,
   clientPassportStrategy,
+  githubPassportStrategy,
+  ibmauth,
 };
